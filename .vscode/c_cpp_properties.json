@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/gcc/14.1.0_2/include/c++/14",
+                "/opt/homebrew/Cellar/gcc/14.1.0_2/include/c++/14/aarch64-apple-darwin23",
+                "/opt/homebrew/Cellar/gcc/14.1.0_2/lib/gcc/14/gcc/aarch64-apple-darwin23/14/include",
+                "/Library/Developer/CommandLineTools/usr/include"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "compilerPath": "/opt/homebrew/bin/g++-14",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-arm64"
+        }
+    ],
+    "version": 4
+}

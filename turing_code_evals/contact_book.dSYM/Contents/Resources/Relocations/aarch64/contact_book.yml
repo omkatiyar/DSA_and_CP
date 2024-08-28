@@ -1,0 +1,26 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/omsmac/Cohort/DSA_and_CP/turing_code_evals/contact_book'
+relocations:
+  - { offsetInCU: 0x5412, offset: 0x5412, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x1C728, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x5768, offset: 0x5768, size: 0x8, addend: 0x0, symName: __ZStgtIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_, symObjAddr: 0x2044, symBinAddr: 0x100002FF8, symSize: 0x30 }
+  - { offsetInCU: 0x57BB, offset: 0x57BB, size: 0x8, addend: 0x0, symName: __ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_, symObjAddr: 0x1FC4, symBinAddr: 0x100002F78, symSize: 0x80 }
+  - { offsetInCU: 0x5818, offset: 0x5818, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1E9C, symBinAddr: 0x100002E50, symSize: 0x128 }
+  - { offsetInCU: 0x5888, offset: 0x5888, size: 0x8, addend: 0x0, symName: __ZN11ContactBookD1Ev, symObjAddr: 0x1E78, symBinAddr: 0x100002E2C, symSize: 0x24 }
+  - { offsetInCU: 0x589B, offset: 0x589B, size: 0x8, addend: 0x0, symName: __ZN11ContactBook9StructureEv, symObjAddr: 0x1BAC, symBinAddr: 0x100002B60, symSize: 0x2CC }
+  - { offsetInCU: 0x58E9, offset: 0x58E9, size: 0x8, addend: 0x0, symName: __ZN11ContactBook8reopenCBEv, symObjAddr: 0x18C8, symBinAddr: 0x10000287C, symSize: 0x2E4 }
+  - { offsetInCU: 0x59D1, offset: 0x59D1, size: 0x8, addend: 0x0, symName: __ZN11ContactBook10OflineSaveEv, symObjAddr: 0x17C8, symBinAddr: 0x10000277C, symSize: 0x100 }
+  - { offsetInCU: 0x5A1B, offset: 0x5A1B, size: 0x8, addend: 0x0, symName: __ZN11ContactBook12EditContactsEv, symObjAddr: 0x1240, symBinAddr: 0x1000021F4, symSize: 0x588 }
+  - { offsetInCU: 0x5AA7, offset: 0x5AA7, size: 0x8, addend: 0x0, symName: __ZN11ContactBook10BubbleSortEv, symObjAddr: 0x1108, symBinAddr: 0x1000020BC, symSize: 0x138 }
+  - { offsetInCU: 0x5B20, offset: 0x5B20, size: 0x8, addend: 0x0, symName: __ZN11ContactBook21DeleteContactBySearchEv, symObjAddr: 0x9E0, symBinAddr: 0x100001994, symSize: 0x728 }
+  - { offsetInCU: 0x5BA8, offset: 0x5BA8, size: 0x8, addend: 0x0, symName: __ZN11ContactBook17DeleteAllContactsEv, symObjAddr: 0x8D8, symBinAddr: 0x10000188C, symSize: 0x108 }
+  - { offsetInCU: 0x5C1B, offset: 0x5C1B, size: 0x8, addend: 0x0, symName: __ZN4NodeD1Ev, symObjAddr: 0x8B8, symBinAddr: 0x10000186C, symSize: 0x20 }
+  - { offsetInCU: 0x5C36, offset: 0x5C36, size: 0x8, addend: 0x0, symName: __ZN11ContactBook6SearchEv, symObjAddr: 0x534, symBinAddr: 0x1000014E8, symSize: 0x384 }
+  - { offsetInCU: 0x5C8B, offset: 0x5C8B, size: 0x8, addend: 0x0, symName: __ZN11ContactBook7DisplayEv, symObjAddr: 0x3D0, symBinAddr: 0x100001384, symSize: 0x164 }
+  - { offsetInCU: 0x5CD1, offset: 0x5CD1, size: 0x8, addend: 0x0, symName: __ZN11ContactBook10CreateNodeEv, symObjAddr: 0x1D4, symBinAddr: 0x100001188, symSize: 0x1FC }
+  - { offsetInCU: 0x5D6E, offset: 0x5D6E, size: 0x8, addend: 0x0, symName: __ZN4NodeC1Ev, symObjAddr: 0x1B4, symBinAddr: 0x100001168, symSize: 0x20 }
+  - { offsetInCU: 0x5DB2, offset: 0x5DB2, size: 0x8, addend: 0x0, symName: __ZN11ContactBookC1Ev, symObjAddr: 0x148, symBinAddr: 0x1000010FC, symSize: 0x6C }
+  - { offsetInCU: 0x5DC1, offset: 0x5DC1, size: 0x8, addend: 0x0, symName: __ZStorSt13_Ios_OpenmodeS_, symObjAddr: 0x128, symBinAddr: 0x1000010DC, symSize: 0x20 }
+  - { offsetInCU: 0x5DF7, offset: 0x5DF7, size: 0x8, addend: 0x0, symName: __ZNSt11char_traitsIcE7compareEPKcS2_m, symObjAddr: 0x38, symBinAddr: 0x100000FEC, symSize: 0xF0 }
+  - { offsetInCU: 0x5E7A, offset: 0x5E7A, size: 0x8, addend: 0x0, symName: __ZNSt11char_traitsIcE2ltERKcS2_, symObjAddr: 0x0, symBinAddr: 0x100000FB4, symSize: 0x38 }
+...
