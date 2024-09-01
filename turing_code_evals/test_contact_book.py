@@ -2,7 +2,7 @@ import cppyy
 import unittest
 
 # Load the C++ source file
-cppyy.include("ideal_completion.cpp")
+cppyy.include("contactBook_refactored.cpp")
 
 # Import the C++ class
 ContactBook = cppyy.gbl.ContactBook

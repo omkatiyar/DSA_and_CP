@@ -7,7 +7,7 @@ class TestBinaryTreeFunctions(unittest.TestCase):
     def setUpClass(cls):
         try:
             # Load the C++ code from the file
-            cpp_file_path = "binary_tree_array.cpp"
+            cpp_file_path = "model_binary_tree_array.cpp"
             if not os.path.exists(cpp_file_path):
                 raise FileNotFoundError(f"{cpp_file_path} not found")
 

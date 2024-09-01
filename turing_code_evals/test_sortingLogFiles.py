@@ -3,16 +3,12 @@ import unittest
 import os
 
 # Load the C++ source file
-cppyy.include("sorting_log_files.cpp")
+cppyy.include("ideal_completion.cpp")
 
 # Import the C++ function
 from cppyy.gbl import reorderLogFiles  # type: ignore
 
 class SortLogFiles(unittest.TestCase):
-
-    @classmethod
-    def tearDownClass(cls) -> None:
-        os.remove("sorting_log_files")
 
     def test_letter_logs_only(self):
         log = ["let3-art-zero", "let2-own-kit-dig", "let1-art-can"]
