@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/omsmac/Cohort/DSA_and_CP/turing_code_evals/adding_node_to_tail'
+relocations:
+  - { offsetInCU: 0x510F, offset: 0x510F, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x16878, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x536A, offset: 0x536A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1C4, symBinAddr: 0x100003C00, symSize: 0xD0 }
+  - { offsetInCU: 0x53E0, offset: 0x53E0, size: 0x8, addend: 0x0, symName: __ZN10LinkedListD1Ev, symObjAddr: 0x164, symBinAddr: 0x100003BA0, symSize: 0x60 }
+  - { offsetInCU: 0x5446, offset: 0x5446, size: 0x8, addend: 0x0, symName: __ZNK10LinkedList9printListEv, symObjAddr: 0xD8, symBinAddr: 0x100003B14, symSize: 0x8C }
+  - { offsetInCU: 0x547D, offset: 0x547D, size: 0x8, addend: 0x0, symName: __ZN10LinkedList9addToTailEi, symObjAddr: 0x50, symBinAddr: 0x100003A8C, symSize: 0x88 }
+  - { offsetInCU: 0x54EB, offset: 0x54EB, size: 0x8, addend: 0x0, symName: __ZN10LinkedListC1Ev, symObjAddr: 0x2C, symBinAddr: 0x100003A68, symSize: 0x24 }
+  - { offsetInCU: 0x552D, offset: 0x552D, size: 0x8, addend: 0x0, symName: __ZN4NodeC1Ei, symObjAddr: 0x0, symBinAddr: 0x100003A3C, symSize: 0x2C }
+...

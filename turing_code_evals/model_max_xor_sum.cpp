@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 long long maximize_xor_sum(int n, vector<int>& arr) {
@@ -17,4 +19,15 @@ long long maximize_xor_sum(int n, vector<int>& arr) {
         maxSum += max(sum0, sum1);
     }
     return maxSum;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    cout << maximize_xor_sum(n, arr) << endl;
+    return 0;
 }

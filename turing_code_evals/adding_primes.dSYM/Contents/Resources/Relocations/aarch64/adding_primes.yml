@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/omsmac/Cohort/DSA_and_CP/turing_code_evals/adding_primes'
+relocations:
+  - { offsetInCU: 0x510F, offset: 0x510F, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x15BA0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x5279, offset: 0x5279, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x110, symBinAddr: 0x100003E90, symSize: 0x8 }
+  - { offsetInCU: 0x52AF, offset: 0x52AF, size: 0x8, addend: 0x0, symName: __Z11sumOfPrimesi, symObjAddr: 0xFC, symBinAddr: 0x100003E7C, symSize: 0x14 }
+  - { offsetInCU: 0x52D8, offset: 0x52D8, size: 0x8, addend: 0x0, symName: __Z7isPrimei, symObjAddr: 0x0, symBinAddr: 0x100003D80, symSize: 0xFC }
+...

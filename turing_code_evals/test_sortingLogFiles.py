@@ -3,7 +3,7 @@ import unittest
 import os
 
 # Load the C++ source file
-cppyy.include("ideal_completion.cpp")
+cppyy.include("model_sorting_log_files.cpp")
 
 # Import the C++ function
 from cppyy.gbl import reorderLogFiles  # type: ignore
@@ -34,7 +34,7 @@ class SortLogFiles(unittest.TestCase):
         expected_value = ["let1-art-can", "let3-art-zero", "let2-own-kit-dig", "dig1-8-1-5-1", "dig2-3-6"]
         self.assertEqual(result, expected_value)
 
-    def test_letter_logs_with_same_content_case(self):
+    def test_digit_and_letter_logs_complex_case(self):
         log = ["a1-9-2-3-1", "g1-act-car", "zo4-4-7", "ab1-off-key-dog", "a8-act-zoo", "b1-act-car"]
         log_vector = cppyy.gbl.std.vector[str](log)
         result_vector = reorderLogFiles(log_vector)

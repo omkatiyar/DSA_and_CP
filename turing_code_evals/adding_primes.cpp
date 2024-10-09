@@ -18,6 +18,8 @@ bool isPrime(int n) {
 }
 
 long long sumOfPrimes(int n) {
-   
+   return 0;
 }
-
+int main(){
+    
+}

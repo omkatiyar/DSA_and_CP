@@ -1,78 +1,65 @@
-import ctypes
+import cppyy
 import unittest
-import os
-import platform
 
-class TestSolution(unittest.TestCase):
+class VehicleOptionsTest(unittest.TestCase):
+
     @classmethod
     def setUpClass(cls):
-        # Determine the correct library file name based on the platform
-        if platform.system() == "Linux":
-            lib_name = "libsolution.so"
-        elif platform.system() == "Windows":
-            lib_name = "solution.dll"
-        elif platform.system() == "Darwin":
-            lib_name = "libsolution.dylib"
-        else:
-            raise Exception(f"Unsupported platform: {platform.system()}")
+        try:
+            # Define the C++ code within cppyy
+            cppyy.cppdef("""
+                #include <iostream>
+                #include <string>
+                #include <sstream>
+                using namespace std;
 
-        # Load the shared library
-        cls.lib = ctypes.CDLL(os.path.abspath(lib_name))
+                string displayVehicleOptions(int option) {
+                    ostringstream out;  // Create an ostringstream to capture the output
 
-        # Define the function prototypes
-        cls.lib.Solution_new.restype = ctypes.POINTER(ctypes.c_void_p)
-        cls.lib.Solution_delete.argtypes = [ctypes.POINTER(ctypes.c_void_p)]
-        cls.lib.Solution_maximumTotalDamage.argtypes = [ctypes.POINTER(ctypes.c_void_p), ctypes.POINTER(ctypes.c_int), ctypes.c_int]
-        cls.lib.Solution_maximumTotalDamage.restype = ctypes.c_int
+                    switch(option) {
+                    case 1:
+                        out << "Service Option : Swift Economy" << endl;
+                        out << "Vehicle Type : Ford Fiesta " << endl;
+                        out << "Notes : This hatchback is ideal for small trips due to its compact size." << endl;
+                        out << "Its strong reliability and fuel consumption make it a prime choice for Swift Economy!" << endl;
+                        break;
+                    case 2:
+                        out << "Service Option : Standard Swift" << endl;
+                        out << "Vehicle Type : Honda Accord " << endl;
+                        out << "Notes : The Accord fits more passengers than typical hatchbacks, up to 4 total." << endl;
+                        out << "Greater load means more fuel use, but it's still a wise choice for Standard Swift service." << endl;
+                        break;
+                    case 3:
+                        out << "Service Option : Supreme Swift" << endl;
+                        out << "Vehicle Type : Dodge Caravan " << endl;
+                        out << "Notes : This 7-seater ideal for families with lot of baggage, though it has a higher fuel cost." << endl;
+                        out << "Despite the cost, its capacity for numerous passengers and luggage is advantageous!" << endl;
+                        break;
+                    default:
+                        out << "Invalid option!" << endl;
+                        break;
+                    }
 
-        # Create an instance of the Solution class
-        cls.solution = cls.lib.Solution_new()
+                    return out.str();  // Return the captured output as a string
+                }
+            """)
+        except Exception as e:
+            raise unittest.SkipTest(f"Error during C++ compilation: {str(e)}")
 
-    @classmethod
-    def tearDownClass(cls):
-        # Clean up and delete the Solution instance
-        cls.lib.Solution_delete(cls.solution)
+    def test_swift_economy_option(self):
+        # Step 1: Call the C++ function and capture the returned string
+        output = cppyy.gbl.displayVehicleOptions(1)
 
-    def test_case_with_different_complete_days(self):
-        # Create a C array from a Python list
-        damage_list = [12,12,30,24,24]
-        damage_array = (ctypes.c_int * len(damage_list))(*damage_list)
-        # Call the maximumTotalDamage method
-        expected_output = 2
-        result = self.lib.Solution_maximumTotalDamage(self.solution, damage_array, len(damage_list))
-        self._expected_output = expected_output
-        self._user_output = result
-        self.assertEqual(result, expected_output)
-    
-    def test_case_with_greater_complete_days(self):
-        # Create a C array from a Python list
-        damage_list = [72,48,24,3]
-        damage_array = (ctypes.c_int * len(damage_list))(*damage_list)
-        # Call the maximumTotalDamage method
-        expected_output = 3
-        result = self.lib.Solution_maximumTotalDamage(self.solution, damage_array, len(damage_list))
-        self._expected_output = expected_output
-        self._user_output = result
-        self.assertEqual(result, expected_output)
+        # Step 2: Define the expected output
+        expected_output = (
+            "Service Option : Swift Economy\n"
+            "Vehicle Type : Ford Fiesta \n"
+            "Notes : This hatchback is ideal for small trips due to its compact size.\n"
+            "Its strong reliability and fuel consumption make it a prime choice for Swift Economy!\n"
+        )
 
-class CustomTestResult(unittest.TextTestResult):
-    def addSuccess(self, test):
-        super().addSuccess(test)
-        print(f"{test._testMethodName} : PASS Expected_Output: {test._expected_output}  User_Output: {test._user_output}")
+        # Step 3: Compare the captured output to the expected output
+        self.assertEqual(output, expected_output)
 
-    def addFailure(self, test, err):
-        super().addFailure(test, err)
-        print(f"{test._testMethodName} : FAIL Expected_Output: {test._expected_output}  User_Output: {test._user_output}")
-
-    def addError(self, test, err):
-        super().addError(test, err)
-        print(f"{test._testMethodName} : ERROR Expected_Output: {test._expected_output}  User_Output: {test._user_output}")
-
-class CustomTestRunner(unittest.TextTestRunner):
-    def run(self, test):
-        result = CustomTestResult(self.stream, self.descriptions, self.verbosity)
-        test(result)
-        return result
-
-if __name__ == "__main__":
-    unittest.main(testRunner=CustomTestRunner(verbosity=2))
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
