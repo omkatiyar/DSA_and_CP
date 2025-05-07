@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/omsmac/Cohort/DSA_and_CP/majority_element_2'
+relocations:
+  - { offset: 0x514D, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x16D5D, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x516B, size: 0x8, addend: 0x0, symName: __ZL4SIZE, symObjAddr: 0x5E0, symBinAddr: 0x100003E18, symSize: 0x0 }
+  - { offset: 0x5193, size: 0x8, addend: 0x0, symName: _board, symObjAddr: 0x16D5E, symBinAddr: 0x100008001, symSize: 0x0 }
+  - { offset: 0x52F4, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x40C, symBinAddr: 0x100003BA8, symSize: 0x1D4 }
+  - { offset: 0x53A7, size: 0x8, addend: 0x0, symName: __Z11checkRowColc, symObjAddr: 0x218, symBinAddr: 0x1000039B4, symSize: 0x1F4 }
+  - { offset: 0x5469, size: 0x8, addend: 0x0, symName: __Z9placeMarkiic, symObjAddr: 0x164, symBinAddr: 0x100003900, symSize: 0xB4 }
+  - { offset: 0x54B5, size: 0x8, addend: 0x0, symName: __Z10printBoardv, symObjAddr: 0x80, symBinAddr: 0x10000381C, symSize: 0xE4 }
+  - { offset: 0x5516, size: 0x8, addend: 0x0, symName: __Z15initializeBoardv, symObjAddr: 0x0, symBinAddr: 0x10000379C, symSize: 0x80 }
+...
