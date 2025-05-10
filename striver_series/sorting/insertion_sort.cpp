@@ -1,9 +1,10 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
 using namespace std;
 // INSERTION SORT
 // We move the element to its correct position
 int main(){
-    int a[] = {14, 9, 15, 12, 6, 8, 13};
+    int a[] = {14,9, 9, 15, 12, 6, 8, 13};
     int n = sizeof(a)/sizeof(a[0]);
     for(int i=0;i<n;i++){
         int j=i;
