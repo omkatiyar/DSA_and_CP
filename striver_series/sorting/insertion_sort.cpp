@@ -8,7 +8,9 @@ int main(){
     int n = sizeof(a)/sizeof(a[0]);
     for(int i=0;i<n;i++){
         int j=i;
+        cout<<" i is "<<i<<" and j is "<<j<<endl;
         while(j>0 && a[j-1]){
+            cout<<"a[j] is "<<a[j]<<" and a[j-1 is] "<<a[j-1]<<endl;
             if(a[j-1]>a[j])
             swap(a[j-1],a[j]);
             j--;
